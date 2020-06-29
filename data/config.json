@@ -1,0 +1,71 @@
+{
+  "project": {
+    "name": "Briefsammlung Trew 1500-1549",
+    "quality": 1
+ },
+  "loader": {
+    "items": "http://dhlab.ub.fau.de/vikus-trew/data/data.csv",
+    "info": "http://dhlab.ub.fau.de/vikus-trew/data/info.md",
+    "timeline": "http://dhlab.ub.fau.de/vikus-trew/data/timeline.csv",
+    "textures": {
+      "big": {
+        "size": 4096,
+        "url": "http://dhlab.ub.fau.de/vikus-trew/data/4096/"
+      },
+      "detail": {
+        "size": 1024,
+        "url": "http://dhlab.ub.fau.de/vikus-trew/data/1024/"
+      },
+      "medium": {
+        "size": 256,
+        "url": "http://dhlab.ub.fau.de/vikus-trew/data/sprites/web_web_full.json"
+      }
+    }
+  },
+  "style": {
+    "fontColor": "#2d3b43",
+    "fontColorActive": "#eae2cb",
+    "fontBackground": "#295b71",
+    "textShadow": "1px 1px 0px #f8f4e9",
+    "canvasBackground": "#eae2cb",
+    "timelineBackground": "#fff9eb",
+    "timelineFontColor": "#000",
+    "backgroundHeader": "#035151",
+    "fontColorHeader": "#f8774f",
+    "detailBackground": "#EEE",
+    "infoBackground": "#33444c",
+    "infoFontColor": "#fff",
+    "searchbarBackground": "#295b71"
+  },
+  "projection": {
+    "columns": 3
+  },
+  "detail": {
+    "structure": [      
+      {
+        "name": "Jahr",
+        "source": "_year",
+        "display": "column",
+        "type": "text"
+      },
+      {
+        "name": "Beteiligte",
+        "source": "_keywords",
+        "display": "column",
+        "type": "array"
+      },
+      {
+        "name": "Id",
+        "source": "_id",
+        "display": "column",
+        "type": "text"
+      },
+      {
+	"name": "URN",
+	"source": "'<a target=\"_blank\" href=\"' + column._url + '\">' + column._url + '</a>'",
+	"display": "column",
+	"type": "function"
+      }
+    ]
+  }
+}
