@@ -139,6 +139,8 @@ Vikus Viewer erwartet eine CSV-Datei mit bestimmter Spaltenanordnung / Datenwert
 
 Trew-Briefe: Wie an Bild zu Metadatensatz gelangen? => Crawlen
 
+Fertige Daten: https://github.com/dhlab-ub-fau-de/vikus-viewer-tutorial
+
 
 ---
 

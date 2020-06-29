@@ -7,18 +7,18 @@ xmlstarlet sel \
      -o 'id,year,keywords,url' \
      -n \
      -m '//tei:correspDesc' \
-     	-v 'concat("BV", substring-before(substring-after(@ref, "29-bv"), "-"))' \
-	-o '%' \
-     	-v 'substring(tei:correspAction/tei:date/@when, 1, 4)' \
-	-o '%"' \
-	-m 'tei:correspAction/tei:persName|tei:correspAction/tei:placeName' \
-	   -v '.' \
-	   -o '%' \
-	   -b \
+        -v 'concat("BV", substring-before(substring-after(@ref, "29-bv"), "-"))' \
+        -o '%' \
+        -v 'substring(tei:correspAction/tei:date/@when, 1, 4)' \
+        -o '%"' \
+        -m 'tei:correspAction/tei:persName' \
+           -v '.' \
+           -o '%' \
+           -b \
         -o '"%"' \
         -v '@ref' \
-	-o '"' \
-	-n | 
+        -o '"' \
+        -n | 
 perl -pe 's/,/./g; s/%/,/g;' |
 perl -pe 's/,","/","/' |
 grep -P ',15[0-4].,' |
